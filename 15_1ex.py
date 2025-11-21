@@ -37,30 +37,37 @@
 
 
 # function to replace words in a file with *****
-def changeword(words):
-    """
-    This function takes a list of words and replaces them with ***** in the file 'ex/word.txt'
+# def changeword(words):
+#     """
+#     This function takes a list of words and replaces them with ***** in the file 'ex/word.txt'
 
-    Parameters:
-    words (list): list of words to replace
+#     Parameters:
+#     words (list): list of words to replace
 
-    Returns:
-    None
-    """
-    with open("ex/word.txt","r+") as f:
-        content = f.read()
-        # iterate over each word in the list
-        for w in words:
-            # replace the word with *****
-            content = content.replace(w, "*****")
-        # go to the beginning of the file
-        f.seek(0)
-        # write the new content
-        f.write(content)
-        # truncate the file to the new length
-        f.truncate()
-changeword(word)
-
+#     Returns:
+#     None
+#     """
+#     with open("ex/word.txt","r+") as f:
+#         content = f.read()
+#         # iterate over each word in the list
+#         for w in words:
+#             # replace the word with *****
+#             content = content.replace(w, "*****")
+#         # go to the beginning of the file
+#         f.seek(0)
+#         # write the new content
+#         f.write(content)
+#         # truncate the file to the new length
+#         f.truncate()
+# changeword(word)
+nord=["python","schedule"]
 with open ("ex/word.txt","r") as f:
-    content = f.read()
-    for w in 
+    content = f.readlines()
+    found = False
+    for i,line in enumerate(content):
+        if any(word in line for word in nord):
+            print(f"Yes word is present at line number: {i+1}")
+            found = True
+    if not found:
+        print("wait bruh")
+
