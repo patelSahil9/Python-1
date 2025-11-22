@@ -1,0 +1,31 @@
+executing one command multiple time can give errors
+
+CREATE DATABASE if not exists name;    #create database if not exists
+DROP DATABASE if exists name;      #delete database
+USE name;                #use database
+
+CREATE TABLE table_name (column1 datatype, column2 datatype, ...);  #create table
+
+SQL Data Types (numeric datatypes):
+Signed datatype (-128-127)- INT, SMALLINT, MEDIUMINT, BIGINT, TINYINT, YEAR
+Unsigned datatype (0-255)- INT UNSIGNED, SMALLINT UNSIGNED, MEDIUMINT UNSIGNED, BIGINT UNSIGNED, TINYINT UNSIGNED
+
+<----------------------SQL commands---------------------->
+
+DDL (Data Definition Language) - CREATE, ALTER, DROP, TRUNCATE, RENAME
+DML (Data Manipulation Language) - INSERT, UPDATE, DELETE, MERGE, CALL, EXPLAIN PLAN, LOCK TABLE
+DCL (Data Control Language) - GRANT, REVOKE
+TCL (Transaction Control Language) - COMMIT, ROLLBACK, SAVEPOINT, SET TRANSACTION
+DQL (Data Query Language) - SELECT
+
+<----------------------show command---------------------->
+show databases;
+show tables;
+show columns from table_name;
+
+<----------------------basic sql commands---------------------->
+SELECT * FROM table_name;     #select all columns from table
+SELECT column1, column2 FROM table_name;   #select specific columns from table
+
+INSERT INTO table_name (column1, column2, ...) VALUES (value1, value2, ...);  #insert values into table
+INSERT INTO table_name VALUES (value1, value2, ...);  #insert values into table
